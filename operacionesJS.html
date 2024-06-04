@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operaciones</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Operaciones Básicas Con Paso de Parámetros</h1>
+    <form id="miformulario" name="valor1" method="post">
+      <label for="">Ingresa un numero:</label><br>
+      <input type="number" name="" id="valor1" autofocus placeholder="Escribe un numero">
+
+      <br>
+      <br>
+      <label for="">Ingresa siguiente numero:</label><br>
+      <input type="number" name="" id="valor2" placeholder="Escribe otro numero">
+
+      <br>
+      <br>
+      <button type="button" onclick="sumar()">+</button>
+      <button type="button" onclick="restar()">-</button>
+      <button type="button" onclick="multiplicar()">*</button>
+      <button type="button" onclick="dividir()">/</button>
+      <br>
+      <p>El resultado es: <span id="el-resultado"></span></p>
+    </form>
+    <script>
+      function sumar(){
+        var x=parseInt(document.getElementById("valor1").value);
+        var y=parseInt(document.getElementById("valor2").value);
+        document.getElementById("el-resultado").innerHTML=x+y;
+      }
+      function restar(){
+        var x=parseInt(document.getElementById("valor1").value);
+        var y=parseInt(document.getElementById("valor2").value);
+        document.getElementById("el-resultado").innerHTML=x-y;
+      }
+      function multiplicar(){
+        var x=parseInt(document.getElementById("valor1").value);
+        var y=parseInt(document.getElementById("valor2").value);
+        document.getElementById("el-resultado").innerHTML=x*y;
+      }
+      function dividir(){
+        var x=parseInt(document.getElementById("valor1").value);
+        var y=parseInt(document.getElementById("valor2").value);
+        document.getElementById("el-resultado").innerHTML=x/y;
+      }
+
+
+    </script>
+  </body>
+</html>
